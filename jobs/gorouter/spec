@@ -10,6 +10,9 @@ templates:
   gorouter.yml.erb: config/gorouter.yml
   gorouter_logrotate.cron.erb: config/gorouter_logrotate.cron
   logrotate.conf.erb: config/logrotate.conf
+  nginx_ctl.erb: bin/nginx_ctl
+  nginx.conf.erb: config/nginx.conf
+  mime.types: config/mime.types
   drain: bin/drain
   cert.pem.erb: config/cert.pem
   key.pem.erb: config/key.pem
@@ -18,14 +21,18 @@ templates:
 packages:
   - routing_utils
   - gorouter
+  - nginx
 
 properties:
   router.port:
     description: "Listening Port for Router."
-    default: 80
+    default: 8899
   router.status.port:
     description: "Port for the Router varz/status endpoint."
     default: 8080
+  router.preferred_network:
+    description: "Preferred subnet to route traffic in instances are available"
+    default: ""
   router.status.user:
     description: "Username for HTTP basic auth to the varz/status endpoint."
   router.status.password:
@@ -99,6 +106,12 @@ properties:
   router.enable_proxy:
     description: "Enables support for the popular PROXY protocol, allowing downstream load balancers that do not support HTTP to pass along client information."
     default: false
+
+  router.internal_only_patterns:
+    description: "Internal only domains"
+  router.extra_internal_ips:
+    description: "Internal ip patterns"
+
 
   nats.user:
     description:

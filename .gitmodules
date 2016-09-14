@@ -111,7 +111,7 @@
 	url = https://github.com/cloudfoundry-incubator/cf-routing-test-helpers
 [submodule "src/code.cloudfoundry.org/gorouter"]
 	path = src/code.cloudfoundry.org/gorouter
-	url = https://github.com/cloudfoundry/gorouter
+	url = https://github.com/nimbus-cloud/gorouter
 [submodule "src/github.com/nats-io/nats"]
 	path = src/github.com/nats-io/nats
 	url = https://github.com/nats-io/nats

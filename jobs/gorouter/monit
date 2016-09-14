@@ -4,3 +4,9 @@ check process gorouter
     with timeout 60 seconds
   stop program "/var/vcap/jobs/gorouter/bin/gorouter_ctl stop"
   group vcap
+
+check process nginx_gorouter
+  with pidfile /var/vcap/sys/run/nginx_gorouter/nginx.pid
+  start program "/var/vcap/jobs/gorouter/bin/nginx_ctl start"
+  stop program "/var/vcap/jobs/gorouter/bin/nginx_ctl stop"
+  group vcap
