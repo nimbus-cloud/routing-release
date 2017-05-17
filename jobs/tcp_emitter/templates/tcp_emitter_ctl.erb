@@ -8,6 +8,11 @@ PIDFILE=$RUN_DIR/tcp_emitter.pid
 source /var/vcap/packages/routing_utils/pid_utils.sh
 source /var/vcap/packages/routing_utils/syslog_utils.sh
 
+<% api_location = p("bbs.api_location")
+if api_location.start_with?("http://","https://")
+  raise "bbs.api_location `#{api_location}` should not contain scheme in URI"
+end %>
+
 <% if p("bbs.require_ssl") %>
   bbs_sec_flags=" \
    -bbsClientCert=${CONF_DIR}/certs/bbs/client.crt \
@@ -21,6 +26,10 @@ source /var/vcap/packages/routing_utils/syslog_utils.sh
 <% end %>
 
 
+function setup_environment() {
+  mkdir -p "${RUN_DIR}"
+}
+
 case $1 in
 
   start)
@@ -32,6 +41,7 @@ case $1 in
     fi
     set -e
 
+    setup_environment
     pid_guard $PIDFILE "tcp_emitter"
 
     tee_output_to_sys_log "${LOG_DIR}" "tcp_emitter"
