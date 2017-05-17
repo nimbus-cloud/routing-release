@@ -1,3 +1,10 @@
+# when deployed via cf-deployment nginx package is required for the nimbus gorouter
+# we need to provide nginx package here in the same way as in cf-release, by linking to capi-release
+# please not that when merging nginx blobs in config/blobs.yml
+# have to be the same at in the relevant version of capi-release
+[submodule "src/capi-release"]
+	path = src/capi-release
+	url = https://github.com/nimbus-cloud/capi-release
 [submodule "src/github.com/tedsuo/rata"]
 	path = src/github.com/tedsuo/rata
 	url = https://github.com/tedsuo/rata
