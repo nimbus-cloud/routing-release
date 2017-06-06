@@ -100,8 +100,8 @@ http {
                 proxy_no_cache                  $nocache;
                 proxy_cache_bypass              $nocache;
 
-                proxy_cache     		        server;
-                proxy_cache_key 		        "$scheme$host$request_uri";
+                proxy_cache     		            server;
+                proxy_cache_key                 "$scheme$request_method$host$request_uri$is_args$args";
                 proxy_buffering                 on;
                 proxy_buffer_size               8k;
                 proxy_buffers                   2048 8k;
