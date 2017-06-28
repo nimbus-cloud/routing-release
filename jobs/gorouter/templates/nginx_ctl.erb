@@ -7,8 +7,7 @@ NGINX_PACKAGE_DIR=/var/vcap/packages/gorouter
 NGINX_JOB_DIR=/var/vcap/jobs/gorouter
 CONFIG_DIR=$NGINX_JOB_DIR/config
 
-source /var/vcap/packages/common/utils.sh
-
+source /var/vcap/packages/routing_utils/pid_utils.sh
 
 case $1 in
 
