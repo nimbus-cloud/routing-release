@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -ex
+
+function setup_nginx_directories {
+  mkdir -p "/var/vcap/data/nginx/tmp"
+}
+
+function main {
+  setup_nginx_directories
+}
+
+main
+
+exit 0

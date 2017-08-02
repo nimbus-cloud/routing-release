@@ -41,6 +41,12 @@ http {
 
     client_max_body_size 1024M;
 
+    client_body_temp_path /var/vcap/data/nginx/tmp/client_body_temp;
+    proxy_temp_path       /var/vcap/data/nginx/tmp/proxy_temp;
+    fastcgi_temp_path     /var/vcap/data/nginx/tmp/fastcgi_temp;
+    uwsgi_temp_path       /var/vcap/data/nginx/tmp/uwsgi_temp;
+    scgi_temp_path        /var/vcap/data/nginx/tmp/scgi_temp;
+
     proxy_cache_path  /var/vcap/sys/gorouter_nginx-cache levels=1:2 keys_zone=server:8m max_size=512m inactive=600m;
     proxy_temp_path /var/vcap/sys/gorouter_nginx-tmp;
 
