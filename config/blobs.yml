@@ -18,19 +18,23 @@ rtr/rtr-linux-amd64.tgz:
   size: 2638231
   object_id: 82080b7f-42ca-4d55-5068-be4161dfcf49
   sha: a702c7fc3316881387b2d333f7a4b0d01b6552c2
+nginx/headers-more-nginx-module-0.32.tar.gz:
+  size: 28033
+  object_id: b14a356b-97f0-4b9a-b61d-bfff1f233e94
+  sha: aadb7f0b6c5b5b9cae2af72984e03dc2fbf3fecb
+nginx/newrelic_nginx_agent-1.2.1.tar.gz:
+  size: 5222
+  object_id: c63358f6-574a-4e20-9d2b-7e1450368b6d
+  sha: 98a1b10475371705932fea4769f8ac1b0451106f
+nginx/nginx-1.11.13.tar.gz:
+  size: 980784
+  object_id: 214aec6b-e095-4b21-7155-d038f699eaae
+  sha: 84f27729754796181dc39d47da761c7e85eb3ae2
 nginx/nginx-upload-module-2.2.tar.gz:
+  size: 28505
   object_id: 161d5d5f-ffde-4e37-9b9f-151139fdc027
   sha: 74ccd116525a155db76f92a1cd484d9516a70398
-  size: 28505
-nginx/nginx-1.11.1.tar.gz:
-  object_id: 53e21bda-b6b2-4d6a-9d6e-1fbfa1f63ecd
-  sha: 6b6172b26628b95c4ad0d6cb5b11eb4aa59c2a83
-  size: 913417
-nginx/headers-more-nginx-module-0.30.tar.gz:
-  object_id: c9069331-8ff2-4b2f-b663-45d7230c5a39
-  sha: a188a399f3e365a0831585a9d7aa0e6ed1a75f0d
-  size: 27793
-nginx/pcre-8.39.tar.gz:
-  object_id: 0bea0468-82a8-4349-8444-2e8674a8bdfb
-  sha: b3aec1f643d9701841e2f9d57ac121a7ff448fc8
-  size: 2062258
+nginx/pcre-8.40.tar.gz:
+  size: 2065161
+  object_id: 44706e8c-255c-4ff3-9737-23ab55a1a214
+  sha: 10384eb3d411794cc15f55b9d837d3f69e35391e
