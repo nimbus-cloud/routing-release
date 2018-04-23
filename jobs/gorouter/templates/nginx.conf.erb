@@ -108,8 +108,8 @@ http {
                 proxy_cache                     server;
                 proxy_cache_key                 "$scheme$request_method$host$request_uri$is_args$args";
                 proxy_buffering                 on;
-                proxy_buffer_size               8k;
-                proxy_buffers                   2048 8k;
+                proxy_buffer_size               <%= p("router.proxy_buffer_size") %>;
+                proxy_buffers                   2048 <%= p("router.proxy_buffer_size") %>;
                 add_header                      X-Proxy-Cache $upstream_cache_status always;
                 proxy_set_header                Host $http_host;
                 proxy_set_header                Upgrade $http_upgrade;

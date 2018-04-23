@@ -201,6 +201,9 @@ properties:
       consistency and there is a possibility of routing to an incorrect
       endpoint in the case of port re-use. To be used with caution."
     default: false
+  router.proxy_buffer_size:
+    description: set the nginx server proxy_buffer_size and proxy_buffers directive
+    default: 8k
 
   uaa.ca_cert:
     description : "Certificate authority for communication between clients and uaa."
