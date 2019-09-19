@@ -58,7 +58,9 @@ http {
         server_name  "vcap.me";
 
         keepalive_timeout  15 10;
-
+        <% if p(router.large_client_header_buffer_size) %>
+        large_client_header_buffers 4 p(router.large_client_header_buffer_size);
+        <% end %>
         access_log   /var/vcap/sys/log/nginx_gorouter/vcap.access.log main;
         server_name_in_redirect off;
         server_tokens off;

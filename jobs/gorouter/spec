@@ -204,6 +204,8 @@ properties:
   router.proxy_buffer_size:
     description: set the nginx server proxy_buffer_size and proxy_buffers directive
     default: 8k
+  router.large_client_header_buffer_size:
+    description: Sets the maximum number and size of buffers used for reading large client request header
 
   uaa.ca_cert:
     description : "Certificate authority for communication between clients and uaa."
