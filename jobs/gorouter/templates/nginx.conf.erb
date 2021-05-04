@@ -103,6 +103,10 @@ http {
             set $nocache "1";
         }
 
+        if ($http_x_bypass_nimbus_cache = "true") {
+            set $nocache "1";
+        }
+
         location / {
                 proxy_no_cache                  $nocache;
                 proxy_cache_bypass              $nocache;
